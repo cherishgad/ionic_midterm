@@ -10,9 +10,10 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
     <ion-item-sliding *ngFor="let task of tasks" #slidingItem> 
-      <ion-item [ngClass]="{taskDone: task.status == 'done'}" > 
+      <ion-item [ngClass]="{taskDone: task.status == 'done'}" (click) ="goParkDetails(park)" detail-push>> 
         <p>{{task.name}}</p>
         <p>{{task.phone_number}}</p>
       </ion-item>
