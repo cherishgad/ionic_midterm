@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-
+  parkInfo: object;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.parkInfo = navParams.data.task;
+    console.log(this.parkInfo);
   }
 
   ionViewDidLoad() {

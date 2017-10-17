@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ItemSliding } from 'ionic-angular';
+import { NavController, ItemSliding, NavParams  } from 'ionic-angular';
 
 
 @Component({
@@ -45,5 +45,8 @@ export class HomePage {
   resetList(event) { 
     // Reset items back to all of the items
     
+  }
+  goTaskDetails(task) { 
+    this.navCtrl.push("DetailPage", {task});
   }
 }
